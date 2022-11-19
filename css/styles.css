@@ -1,15 +1,22 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
 html {
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-size: 15px;
 }
+
 body {
   display: grid;
   place-content: center;
   min-height: 100vh;
   padding: 0px;
   margin: 0px;
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--Light-gray);
 }
 .card {
   margin: 1rem;
@@ -26,13 +33,24 @@ body {
   text-align: center;
 }
 .card-content h1 {
-    
   font-weight: 700;
   font-size: 1.7rem;
-  color: hsl(218, 44%, 22%);
+  color: var(--Dark-blue);
 }
 .card-content p {
   font-weight: 400;
   font-size: 1.2rem;
-  color: hsl(220, 15%, 55%);
+  color: var(--Grayish-bluej);
+}
+
+@media screen and (min-width: 320px) {
+  .card {
+    width: 320px;
+  }
+  .card-content h1 {
+    font-size: 1.6rem;
+  }
+  .card-content p {
+    font-size: 1.2 rem;
+  }
 }
